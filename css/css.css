@@ -1,0 +1,285 @@
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+
+body {
+  background: #000;
+}
+
+.wrap {
+  width: 50em;
+  height: 36.438em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -18.219em 0 0 -25em;
+  overflow: hidden;
+}
+
+.wrap::before, 
+.wrap::after {
+  content: "";
+  width: 0;
+  height: 22.875em;
+  background: linear-gradient(transparent 50%, rgba(255,255,255, .5) 50%);
+  background-size: .25em .25em;
+  position: absolute;
+  top: 6.938em;
+  left: 0;
+  z-index: 1;
+  animation: stripes .6s linear 7.01s forwards;
+}
+
+.wrap::after {
+  background: linear-gradient(transparent 50%, rgba(0,0,0, .5) 50%);
+  background-size: .25em .25em;
+  animation: stripes .6s linear 1s forwards,
+             stripes .6s linear 51s forwards;
+}
+
+.tit {
+  width: 27.188em;
+  height: 2.5em;
+  background: #000 url('ui-img/sprite.png') no-repeat -76.875em -22.875em;
+  margin: 0 auto;
+  border-style: solid;
+  border-color:  #483aaa;
+  border-width: 3px 11px 3px 5px;
+  opacity: 0;
+  animation: tit 1.5s linear 2 2s forwards;
+}
+
+.scene {
+  width: 0;
+  height: 22.875em;
+  background: #000 url('ui-img/sprite.png') no-repeat -76.875em -25.375em;
+  position: absolute;
+  left: 0;
+  margin: 4.125em auto 0;
+  animation: introWhite 6.5s linear 1s,
+             introWhite 6.25s linear 51s forwards;
+}
+
+.scene::before, 
+.scene::after {
+  content:"";
+  width: 50em;
+  background: url('ui-img/sprite.png') no-repeat -115.938em -22.875em;
+  opacity: 0;
+}
+
+.scene::before {
+  display: block;
+  height: 1.438em;
+  margin: -2.688em auto 0;
+  animation: subTitle 1s linear forwards 5s;
+}
+
+.scene::after {
+  height: 4.25em;
+  background-position: -126.875em -24.125em;
+  position: absolute;
+  left: 0;
+  bottom: -5.75em;
+  animation: poem 32s linear 5s forwards;
+}
+
+.bard {
+  width: 0;
+  height: 22.875em;
+  background: url('ui-img/sprite.png') no-repeat;
+  position: absolute;
+  top: 11.438em;
+  left: 25em;
+  margin: -11.438em 0 0 -25em;
+  overflow: hidden;
+  animation: introColor 1s linear 7s forwards,
+             singer 1s steps(4) 5 7.4s,
+             beer 1s steps(8) 2 alternate 12.4s,
+             singer 1s steps(4) 2 14.5s,
+             singer 1s steps(4) 2 18.5s,
+             singer 1s steps(4) 3 22.5s,
+             singer 1s steps(4) 2 28s,
+             singer 1s steps(4) 3 32.8s,
+             beer 1s steps(8) 2 alternate 36s,
+             singer 1s steps(4) 2 38.2s,
+             singer 1s steps(4) 2 42.1s,
+             singer 1s steps(4) 4 46s;
+}
+
+.bard::after {
+  content: "";
+  width: 15.375em;
+  height: 12.313em;
+  background: url('ui-img/sprite.png') 15.375em -22.875em;
+  position: absolute;
+  top: 0;
+  left: 24.313em;
+  animation:  tower 6s steps(4) 16.4s,
+              sword 7s steps(5) 25.4s,
+              chest 6s steps(4) 40s;
+}
+
+
+@keyframes stripes {
+
+  50% {
+    width: 50em;
+    transform: translateX(0);
+  }
+  
+  100% {
+    width: 50em;
+    transform: translateX(50em);
+  }
+}
+
+
+@keyframes tit {
+  
+  from {
+    opacity: 1;
+  }
+  
+  to {
+    transform: rotateX(360deg);
+    opacity: 1;
+  }
+  
+}
+
+@keyframes introWhite {
+  4% {
+    width: 50em;
+  }
+  100% {
+    width: 50em;
+  }
+}
+
+@keyframes subTitle {
+  from, to {
+    opacity: 1;
+  }
+}
+
+@keyframes poem {
+  
+  0% {
+    opacity: 1;
+  }
+  
+  6.999% {
+    background-position: -126.875em -24.125em;
+  }
+  
+  7% {
+    background-position: -126.875em -28.625em;
+  }
+  
+  29.999% {
+    background-position: -126.875em -28.625em;
+  }
+  
+  30% {
+    background-position: -126.875em -32.875em;
+  }
+  
+  58.999% {
+    background-position: -126.875em -32.875em;
+  }
+  
+  59% {
+    background-position: -126.875em -37.125em;
+  }
+  
+  91.99% {
+    background-position: -126.875em -37.125em;
+  }
+  
+  92% {
+    background-position: -126.875em -41.375em;
+  }
+  
+  100% {
+    background-position: -126.875em -41.375em;
+    opacity: 1;
+  }
+  
+}
+
+@keyframes introColor {
+  
+  50% {
+    width: 50em;
+  }
+  
+  100% {
+    width: 50em;
+    z-index: -1;
+  }
+  
+}
+
+@keyframes singer {
+
+  to {
+    background-position: -200em 0; 
+  }
+  
+}
+
+@keyframes beer {
+  
+  from {
+    background-position: -200em 0; 
+  }
+  to {
+    background-position: -600em 0; 
+  }
+  
+}
+
+
+@keyframes tower {
+  
+  0% {
+    background-position: 15.375em -22.875em;
+  }
+  
+  35%, 65% {
+    background-position: -46.125em -22.875em;
+  }
+  
+  100% {
+    background-position: 15.375em -22.875em; 
+  }
+  
+}
+
+@keyframes sword {
+  0% {
+    background-position: 15.375em -35.188em;
+  }
+  
+  35%, 65% {
+    background-position: -61.5em -35.188em; 
+  }
+  
+  100% {
+    background-position: 15.375em -35.188em; 
+  }
+}
+
+@keyframes chest {
+  0% {
+    background-position: 15.375em -47.5em; 
+  }
+  
+  35%, 65% {
+    background-position: -46.125em -47.5em; 
+  }
+  
+  100% {
+    background-position: 15.375em -47.5em; 
+  }
+}
