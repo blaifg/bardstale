@@ -131,6 +131,7 @@ body {
     width: 50em;
     transform: translateX(50em);
   }
+  
 }
 
 
@@ -148,12 +149,14 @@ body {
 }
 
 @keyframes introWhite {
+  
   4% {
     width: 50em;
   }
   100% {
     width: 50em;
   }
+  
 }
 
 @keyframes subTitle {
