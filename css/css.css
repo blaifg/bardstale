@@ -75,8 +75,8 @@ body {
 }
 
 .scene::after {
-  height: 4.25em;
-  background-position: -126.875em -24.125em;
+  height: 4.5em;
+  background-position: -126.875em -24.313em;
   position: absolute;
   left: 0;
   bottom: -5.75em;
@@ -172,39 +172,39 @@ body {
   }
   
   6.999% {
-    background-position: -126.875em -24.125em;
+    background-position: -126.875em -24.313em;
   }
   
   7% {
-    background-position: -126.875em -28.625em;
+    background-position: -126.875em -28.938em;
   }
   
   29.999% {
-    background-position: -126.875em -28.625em;
+    background-position: -126.875em -28.938em;
   }
   
   30% {
-    background-position: -126.875em -32.875em;
+    background-position: -126.875em -33.5em;
   }
   
   58.999% {
-    background-position: -126.875em -32.875em;
+    background-position: -126.875em -33.5em;
   }
   
   59% {
-    background-position: -126.875em -37.125em;
+    background-position: -126.875em -38.063em;
   }
   
   91.99% {
-    background-position: -126.875em -37.125em;
+    background-position: -126.875em -38.063em;
   }
   
   92% {
-    background-position: -126.875em -41.375em;
+    background-position: -126.875em -42.625em;
   }
   
   100% {
-    background-position: -126.875em -41.375em;
+    background-position: -126.875em -42.625em;
     opacity: 1;
   }
   
